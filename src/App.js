@@ -53,10 +53,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>やる曲メモ</h2>
-	<FindMusic onSubmit={this.handleSubmit} />
-	<MemoList data={this.state.list}
-         onChangeStatus={this.handleChangeStatus} />
+	<div className="main-container">
+	  <h2>やる曲メモ</h2>
+	  <FindMusic onSubmit={this.handleSubmit} />
+	  <MemoList data={this.state.list}
+	   onChangeStatus={this.handleChangeStatus} />
+	</div>
       </div>
     );
   }

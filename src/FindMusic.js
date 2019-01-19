@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FindMusic.css'
 
 export default class extends Component {
   constructor(props) {
@@ -28,8 +29,9 @@ export default class extends Component {
       <form onSubmit={this.handleSubmit}>
 	<input type="text" 
 	 value={this.state.value}
-	 onChange={this.handleChange}>
-	</input>
+	 onChange={this.handleChange}
+         className="find-textbox"
+	 placeholder="曲名" />
       </form>
     );
   }

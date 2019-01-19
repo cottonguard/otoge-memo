@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './MemoList.css';
 
 export default class extends Component {
   constructor(props) {
@@ -81,7 +82,9 @@ class MemoEntry extends Component {
     let status = this.props.data.status;
     return (
       <div className={`memo-entry memo-entry-${status}`}>
-	{this.props.data.musicName}
+	<div className="music-name">
+	  {this.props.data.musicName}
+        </div>
 	{
 	  status === 'unplayed' &&
 	  <button name="played"
